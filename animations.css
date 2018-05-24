@@ -1,0 +1,148 @@
+#container {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    border: 4mm;
+    border-color: deeppink;
+    border-style: ridge;
+    z-index: 1;
+}
+#galaxyBackground {
+    position: absolute;
+    width:1200px;
+    height:600px;
+    left: 0px;
+    top: 0px;
+}
+#Title {
+    position: absolute;
+    border: 4mm ridge rgb(170, 50, 220, .6);
+    width: 200px;
+    height: 120px;
+    left: 5px;
+    top: 5px;
+    font-size: 40;
+    font-family: fantasy;
+
+}
+h1 {
+    color:antiquewhite;
+    font-size: 20px;
+
+}
+.allTheThings {
+    visibility: hidden;
+}
+#sherlockAndJohn {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 950px;
+    top: 350px;
+}
+@keyframes dancingCat1 {
+    0% {left: 950px; top: 150px}
+}
+#dancingCat1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    top: 150px;
+    animation-name: dancingCat1, spin;
+    animation-duration: 4s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#starsloth {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 0px;
+    top: 475px;
+    animation-name: starsloth;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+@keyframes starsloth {
+    0%   {left:0px; top:450px;}
+    25%  {left:240px; top:0px;}
+    50%  {left:480px; top:450px;}
+    75%  {left:720px; top:0px;}
+    100% {left:1000px; top:450px;}
+}
+#galaxyllama {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 1000px;
+    top: 0px;
+    animation-name: starsloth, spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#dancingcat2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 1000px;
+    top: 0px;
+}
+#dancingdean{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 800px;
+    top: 350px;
+}
+#dancingsloth {
+    position: absolute;
+    width: 225px;
+    height: 225px;
+    left: 0px;
+    top: 360px;
+}
+#manattee {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 800px;
+    top: 150px;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#dwight {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    left: 150px;
+    top: -130px;
+    animation-name: fade,invertIt,spin;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction:alternate;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: .75;
+    }
+}
+@keyframes invertIt {
+    0% {filter: invert(0%)}
+    100% {filter: invert(100%)}
+}
