@@ -42,3 +42,24 @@ function changeBorderColor() {
 
 }
 
+var discoball = document.getElementById("discoBall");
+var container = document.getElementById("container");
+var movemouse = document.getElementById("movemouse");
+container.addEventListener("mousemove", moveDiscoBall);
+
+function moveDiscoBall(event) {
+    var xPosition = event.clientX - container.getBoundingClientRect().left - (discoball.clientWidth / 2);
+    var yPosition = event.clientY - container.getBoundingClientRect().top - (discoball.clientHeight / 2);
+    discoball.style.left = xPosition + "px";
+    discoball.style.top = yPosition + "px";
+}
+var galaxy = document.getElementById("galaxyBackground");
+var click = document.getElementById("click");
+function invertGalaxy(event) {
+    if (galaxy.style.filter = "invert(100%)") {
+        galaxy.style.filter = "invert(0%)";
+    }else if (galaxy.style.filter = "invert(100%)"){
+        galaxy.style.filter = "invert(0%)";
+    }
+}
+container.addEventListener("click", invertGalaxy);

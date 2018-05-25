@@ -3,9 +3,10 @@
     width: 1200px;
     height: 600px;
     border: 4mm;
+    top: 0px;
     border-color: deeppink;
     border-style: ridge;
-    z-index: 1;
+
 }
 #galaxyBackground {
     position: absolute;
@@ -13,6 +14,7 @@
     height:600px;
     left: 0px;
     top: 0px;
+    filter: invert(100%);
 }
 #Title {
     position: absolute;
@@ -23,13 +25,14 @@
     top: 5px;
     font-size: 40;
     font-family: fantasy;
+    z-index: 1;
 
 }
 h1 {
-    color:antiquewhite;
     font-size: 20px;
-
+    color: aliceblue;
 }
+
 .allTheThings {
     visibility: hidden;
 }
@@ -81,7 +84,7 @@ h1 {
     height: 200px;
     left: 1000px;
     top: 0px;
-    animation-name: starsloth, spin;
+    animation-name: starsloth, invertIt, spin;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -124,7 +127,7 @@ h1 {
     height: 400px;
     left: 150px;
     top: -130px;
-    animation-name: fade,invertIt,spin;
+    animation-name: fade,spin;
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-direction:alternate;
@@ -145,4 +148,11 @@ h1 {
 @keyframes invertIt {
     0% {filter: invert(0%)}
     100% {filter: invert(100%)}
+}
+#discoBall {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    transition: transform .1s, background .2s, left .2s ease-out, top .2s ease-out;
+    pointer-events: none;
 }
