@@ -55,11 +55,43 @@ function moveDiscoBall(event) {
 }
 var galaxy = document.getElementById("galaxyBackground");
 var click = document.getElementById("click");
+
 function invertGalaxy(event) {
     if (galaxy.style.filter = "invert(100%)") {
         galaxy.style.filter = "invert(0%)";
-    }else if (galaxy.style.filter = "invert(100%)"){
+    } else if (galaxy.style.filter = "invert(100%)") {
         galaxy.style.filter = "invert(0%)";
     }
 }
 container.addEventListener("click", invertGalaxy);
+
+
+window.addEventListener("keydown", moveSquirrel);
+var squirrel = document.getElementById("squirrel");
+var squirreltop = 10
+var squirrelleft = 10
+
+function moveSquirrel(event) {
+    if (event.key === "ArrowUp") {
+        squirreltop = squirreltop - 20;
+        squirrel.style.top = squirreltop + "px";
+        squirrelleft = squirrelleft - 20;
+        squirrel.style.left = squirrelleft + "px";
+    } else if (event.key === "ArrowDown") {
+        squirreltop = squirreltop + 20;
+        squirrel.style.top = squirreltop + "px";
+        squirrelleft = squirrelleft + 20;
+        squirrel.style.left = squirrelleft + "px";
+    } else if(event.key === "ArrowLeft") {
+        squirreltop = squirreltop - 0;
+        squirrel.style.top = squirreltop + "px";
+        squirrelleft = squirrelleft - 20;
+        squirrel.style.left = squirrelleft + "px";
+    }
+    else if (event.key === "ArrowRight") {
+        squirreltop = squirreltop + 0;
+        squirrel.style.top = squirreltop + "px";
+        squirrelleft = squirrelleft + 20;
+        squirrel.style.left = squirrelleft + "px";
+    }
+}

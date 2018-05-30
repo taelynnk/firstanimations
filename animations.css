@@ -156,3 +156,10 @@ h1 {
     transition: transform .1s, background .2s, left .2s ease-out, top .2s ease-out;
     pointer-events: none;
 }
+#squirrel {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 220px;
+    left: 10px;
+}
