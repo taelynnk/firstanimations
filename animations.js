@@ -75,7 +75,7 @@ function moveSquirrel(event) {
     if (event.key === "ArrowUp") {
         squirreltop = squirreltop - 20;
         squirrel.style.top = squirreltop + "px";
-        squirrelleft = squirrelleft - 20;
+        squirrelleft = squirrelleft + 20;
         squirrel.style.left = squirrelleft + "px";
     } else if (event.key === "ArrowDown") {
         squirreltop = squirreltop + 20;
