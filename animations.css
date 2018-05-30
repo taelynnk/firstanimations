@@ -127,7 +127,7 @@ h1 {
     height: 400px;
     left: 150px;
     top: -80px;
-    animation-name: fade,spin;
+    animation-name: fade,spin,invertIt;
     animation-iteration-count: infinite;
     animation-duration: 5s;
     animation-direction:alternate;
